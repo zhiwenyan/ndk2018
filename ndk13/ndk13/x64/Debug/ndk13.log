@@ -1,0 +1,16 @@
+﻿生成启动时间为 9/29/2018 5:43:05 PM。
+     1>项目“F:\zhiwenyan\vsworkspace\ndk13\ndk13\ndk13.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /sdl /Od /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TC /errorReport:prompt simple.c
+         simple.c
+     1>simple.c(13): warning C4090: “初始化”: 不同的“const”限定符
+     1>simple.c(17): warning C4133: “函数”: 从“char *”到“const jchar *”的类型不兼容
+     1>simple.c(60): warning C4090: “初始化”: 不同的“const”限定符
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"F:\zhiwenyan\vsworkspace\ndk13\x64\Debug\ndk13.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\zhiwenyan\vsworkspace\ndk13\x64\Debug\ndk13.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\zhiwenyan\vsworkspace\ndk13\x64\Debug\ndk13.lib" /MACHINE:X64 /DLL x64\Debug\simple.obj
+         ndk13.vcxproj -> F:\zhiwenyan\vsworkspace\ndk13\x64\Debug\ndk13.dll
+     1>已完成生成项目“F:\zhiwenyan\vsworkspace\ndk13\ndk13\ndk13.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:05.39

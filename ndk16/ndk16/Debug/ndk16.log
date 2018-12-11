@@ -1,0 +1,18 @@
+﻿生成启动时间为 9/30/2018 3:00:32 PM。
+     1>项目“F:\zhiwenyan\vsworkspace\ndk16\ndk16\ndk16.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _CRT_SECURE_NO_WARNINGS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt simple.c
+         simple.c
+     1>f:\zhiwenyan\vsworkspace\ndk16\ndk16\simple.c(36): warning C4172: 返回局部变量或临时变量的地址
+     1>f:\zhiwenyan\vsworkspace\ndk16\ndk16\simple.c(39): warning C4101: “buffer”: 未引用的局部变量
+     1>f:\zhiwenyan\vsworkspace\ndk16\ndk16\simple.c(64): warning C4172: 返回局部变量或临时变量的地址
+     1>f:\zhiwenyan\vsworkspace\ndk16\ndk16\simple.c(68): warning C4101: “a”: 未引用的局部变量
+     1>f:\zhiwenyan\vsworkspace\ndk16\ndk16\simple.c(40): warning C4716: “getStr4”: 必须返回一个值
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\zhiwenyan\vsworkspace\ndk16\Debug\ndk16.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\zhiwenyan\vsworkspace\ndk16\Debug\ndk16.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\zhiwenyan\vsworkspace\ndk16\Debug\ndk16.lib" /MACHINE:X86 Debug\simple.obj
+         ndk16.vcxproj -> F:\zhiwenyan\vsworkspace\ndk16\Debug\ndk16.exe
+     1>已完成生成项目“F:\zhiwenyan\vsworkspace\ndk16\ndk16\ndk16.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:04.66

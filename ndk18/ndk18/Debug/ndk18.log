@@ -1,0 +1,12 @@
+﻿生成启动时间为 8/17/2018 5:56:57 PM。
+     1>项目“F:\zhiwenyan\vsworkspace\ndk18\ndk18\ndk18.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt simple.cpp
+         simple.cpp
+     1>f:\zhiwenyan\vsworkspace\ndk18\ndk18\simple.cpp(92): error C2664: “void print(char **,int)”: 无法将参数 1 从“char [10][30]”转换为“char **”
+                 与指向的类型无关；转换要求 reinterpret_cast、C 样式转换或函数样式转换
+     1>已完成生成项目“F:\zhiwenyan\vsworkspace\ndk18\ndk18\ndk18.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:00.37

@@ -1,0 +1,18 @@
+﻿生成启动时间为 9/14/2018 2:01:21 PM。
+     1>项目“F:\zhiwenyan\vsworkspace\ndk12\ndk12\ndk12.vcxproj”在节点 2 上(Rebuild 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /sdl /Od /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TC /errorReport:prompt "JNIEnv实现原理.c" Simple.c
+         Simple.c
+     1>Simple.c(31): warning C4090: “初始化”: 不同的“const”限定符
+         JNIEnv实现原理.c
+         正在生成代码...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"F:\zhiwenyan\vsworkspace\ndk12\x64\Debug\ndk12.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\zhiwenyan\vsworkspace\ndk12\x64\Debug\ndk12.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\zhiwenyan\vsworkspace\ndk12\x64\Debug\ndk12.lib" /MACHINE:X64 /DLL "x64\Debug\JNIEnv实现原理.obj"
+         x64\Debug\Simple.obj
+            正在创建库 F:\zhiwenyan\vsworkspace\ndk12\x64\Debug\ndk12.lib 和对象 F:\zhiwenyan\vsworkspace\ndk12\x64\Debug\ndk12.exp
+         ndk12.vcxproj -> F:\zhiwenyan\vsworkspace\ndk12\x64\Debug\ndk12.dll
+     1>已完成生成项目“F:\zhiwenyan\vsworkspace\ndk12\ndk12\ndk12.vcxproj”(Rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.96
