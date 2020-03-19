@@ -8,7 +8,7 @@ typedef const struct JNINativeInterface *JNIEnv;
 struct JNINativeInterface
 {
 	//结构体的方法指针
-	char*(*NewStringUTF)(JNIEnv*, char*);
+	char* (*NewStringUTF)(JNIEnv*, char*);
 
 };
 char* NewStringUTF(JNIEnv* env, char* c_str){

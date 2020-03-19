@@ -24,6 +24,7 @@ JNIEXPORT void JNICALL Java_com_steven_ndk15_Simple1_sort
 
 	//同步数组的数据 给java数组 intArray并不是jarray
 }
+//Native层构建java对象
 JNIEXPORT void JNICALL Java_com_steven_ndk15_Simple1_localRef
 (JNIEnv *env, jclass jclz){
 	//在native层构建java对象，不用了怎么管理
@@ -33,12 +34,13 @@ JNIEXPORT void JNICALL Java_com_steven_ndk15_Simple1_localRef
 	jmethodID j_mid = (*env)->GetMethodID(env, j_clz, "<init>", "()V");
 	jobject j_str = (*env)->NewObject(env, j_clz, j_mid);
 	//j_str = "sss";
-	//printf("%s\n", j_str);
+	//printf("%s\n",j_str);
 	//jobject 不在使用了，要回收javaGC的源码
 	(*env)->DeleteLocalRef(env, j_str);
 	//删除了不能在使用了，c和C++都需要自己释放内存（静态开辟不需要，动态开辟需要）
 }
 
+//全局引用
 jstring globalRef;
 JNIEXPORT void JNICALL Java_com_steven_ndk15_Simple1_saveGlobalRef
 (JNIEnv *env, jclass jclz, jstring jstr){
@@ -47,12 +49,13 @@ JNIEXPORT void JNICALL Java_com_steven_ndk15_Simple1_saveGlobalRef
 	//NewGlobalRef new一个全局的引用
 	globalRef=(*env)->NewGlobalRef(env, jstr);
 }
-
+//这个方法需要用到全局引用
 JNIEXPORT jstring JNICALL Java_com_steven_ndk15_Simple1_getGlobalRef
 (JNIEnv * env, jclass jclz){
 	return globalRef;
 
 }
+//释放全局引用
 JNIEXPORT void JNICALL Java_com_steven_ndk15_Simple1_deleteGlobalRef
 (JNIEnv * env, jclass jclz){
 	//手动释放下
@@ -65,16 +68,17 @@ static  jfieldID j_name_fid = NULL;
 static  jfieldID j_name_fid1 = NULL;
 static  jfieldID j_name_fid2 = NULL;
 
+//本地的静态缓存
 JNIEXPORT void JNICALL Java_com_steven_ndk15_Simple1_staticLocalCache
 (JNIEnv *env, jclass j_clz, jstring jstr){
 	//本地的静态缓存
-/*	static jfieldID j_fieldId = NULL;
+	/*static jfieldID j_fieldId = NULL;  //局部缓存，这个方法多次调用，不要反复获取jfieldID
 	if (j_fieldId == NULL){
 		j_fieldId = (*env)->GetStaticFieldID(env, j_clz, "name", "Ljava/lang/String;");
 	}
 	else{
 		printf("j_fieldId not null\n");
-	}
+	} 
 
 	(*env)->SetStaticObjectField(env, j_clz, j_fieldId, jstr);*/
 
@@ -82,9 +86,6 @@ JNIEXPORT void JNICALL Java_com_steven_ndk15_Simple1_staticLocalCache
 
 }
 //全局的静态缓存，在构造函数中初始化的时候会去缓存
-
-
-
 JNIEXPORT void JNICALL Java_com_steven_ndk15_Simple1_initStaticCache
 (JNIEnv * env, jclass j_clz){
 	//初始化

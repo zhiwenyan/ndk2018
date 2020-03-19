@@ -7,6 +7,7 @@ struct Worker{  //定义一个结构体，相当于java的class
 	char name[18]; //10
  	int age;   //4
 	double salary;  //8
+	int* p;
 }; 
 struct Worker1{  //定义一个结构体，相当于java的class
 	char name[10];
@@ -19,7 +20,7 @@ struct Worker2{  //定义一个结构体，相当于java的class
 	char name[10];
 	int age;
 	double salary;
-}worker2;  //变量名
+}worker2;  
 
 
 
@@ -44,11 +45,12 @@ enum  CommentType
 };
 
 void main(){
+
+	
 	//计算的规则：
 	//1、按照最大的字节去计算   2、算的时候只会按照基本类型去计算 3、首先所有的字节数加来，是否能够整除属性最大字节数，不够网上累加
-	int size1 = sizeof(Worker);
+	int size1 = sizeof(worker_);
 	printf("%d\n", size1);
-
 
 	CommentType comment = TEXT;
 	printf("%d\n",comment);
@@ -61,7 +63,7 @@ void main(){
 
 	
 	//	1、结构体的定义和使用
-	 Worker worker = { "steven", 24, 1000.00 }; //初始化
+	 Worker worker = Worker{ "steven", 24, 1000.00 }; //初始化
 
 	//赋值
 	strcpy_s(worker.name, "yanzhiwen");
@@ -83,8 +85,8 @@ void main(){
 	//	printf("name=%s,age=%d,salary=%lf", jack.name, jack.age, jack.salary);
 
 	//2、通过结构体指针去操作数据  
-	 Worker woker1;
-	Worker* worker_p = &woker1;
+	 
+	Worker* worker_p = Worker{};
 	worker_p->age = 30;
 	strcpy_s(worker_p->name, "stevenyan");
 	worker_p->salary = 88888;

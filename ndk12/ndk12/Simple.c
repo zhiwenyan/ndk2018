@@ -13,10 +13,10 @@ JNIEXPORT jstring JNICALL Java_com_steven_ndk12_NDKSimple_getSingnturePassword
 (JNIEnv * env, jobject jobj){
 	return (*env)->NewStringUTF(env, "fumi88");
 }
-
+//改变java中的属性值
 JNIEXPORT void JNICALL Java_com_steven_ndk12_NDKSimple1_changeName
 (JNIEnv * env, jobject jobj){
-	// 获取 name 属性然后修改为 Jac
+	// 获取 name 属性然后修改为 Jack
 	// 3.获取 jclass 
 	jclass j_clz = (*env)->GetObjectClass(env, jobj);
 	// 获取 jfieldId (JNIEnv *env, jclass clazz, const char *name, const char *sig)
@@ -36,6 +36,7 @@ JNIEXPORT void JNICALL Java_com_steven_ndk12_NDKSimple1_changeName
 	jstring jackName = (*env)->NewStringUTF(env, "Jack");
 	(*env)->SetObjectField(env, jobj, j_fid, jackName);
 }
+//改变java中的静态属性值
 JNIEXPORT void JNICALL Java_com_steven_ndk12_NDKSimple1_changeAge
 (JNIEnv * env, jclass jclz){
 	//首先获取原来的age值
@@ -51,3 +52,18 @@ JNIEXPORT void JNICALL Java_com_steven_ndk12_NDKSimple1_changeAge
 	(*env)->SetStaticIntField(env,jclz,j_fid,old_age);
 
 }
+//调用java中的方法
+JNIEXPORT void JNICALL Java_com_steven_ndk12_NDKSimple1_callMethod
+(JNIEnv* env, jobject jobj) {
+
+	jclass j_clz = (*env)->GetObjectClass(env, jobj);
+
+	jmethodID  j_methodID =(*env)->GetMethodID(env, j_clz,"add","(II)I");
+	
+	jint add=(*env)->CallIntMethod(env, jobj, j_methodID,100,100);
+
+	printf("add=%d", add);
+
+}
+
+

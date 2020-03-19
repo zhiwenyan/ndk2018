@@ -1,6 +1,7 @@
 #include "com_steven_ndk13_Simple1.h"
 
 
+//调用java中的方法
 JNIEXPORT void JNICALL Java_com_steven_ndk13_Simple1_callMethodCallback
 (JNIEnv *env, jclass j_clz){
 	//去调用GetUUID的方法
@@ -17,7 +18,7 @@ JNIEXPORT void JNICALL Java_com_steven_ndk13_Simple1_callMethodCallback
 	(*env)->ReleaseStringChars(env, j_str, c_uuid);
 }
 
-
+//Native层构建java对象
 JNIEXPORT jobject JNICALL Java_com_steven_ndk13_Simple1_createPoint
 (JNIEnv * env, jclass jclz){
 	//jclass对象是simple1
